@@ -1,0 +1,165 @@
+2025-03-10 14:56:32,316 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,316 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,317 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,317 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,321 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,322 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,324 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,324 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,329 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,330 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,331 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,332 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,333 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,333 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,334 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,335 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,338 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,338 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,338 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,342 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,343 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,346 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,352 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,356 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,356 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,367 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,372 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,374 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,374 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:32,375 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:38,852 - INFO - 【evaluate_entity】建筑要素与建筑空间的结果为true
+2025-03-10 14:56:38,995 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:40,000 - INFO - 【evaluate_entity】地质现象与泥石流的结果为true
+2025-03-10 14:56:40,114 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:41,129 - INFO - 【evaluate_entity】建筑要素与可调节遮阳设施的面积的结果为true
+2025-03-10 14:56:41,184 - INFO - 【evaluate_entity】建筑要素与建筑室内外公共区域的结果为true
+2025-03-10 14:56:41,200 - INFO - 【evaluate_entity】建筑要素与门窗的结果为true
+2025-03-10 14:56:41,257 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:41,298 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:41,304 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:47,734 - INFO - 【evaluate_entity】物理现象与水压的结果为true
+2025-03-10 14:56:47,837 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:48,071 - INFO - 【evaluate_entity】建筑要素与外窗透明部分的结果为true
+2025-03-10 14:56:48,176 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:49,654 - INFO - 【evaluate_entity】建筑要素与建筑主体结构的结果为true
+2025-03-10 14:56:49,771 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:50,555 - INFO - 【evaluate_entity】建筑要素与屋面的结果为true
+2025-03-10 14:56:50,714 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:55,687 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:56,622 - INFO - 【evaluate_entity】建筑要素与幕墙的结果为true
+2025-03-10 14:56:56,729 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:57,566 - INFO - 【evaluate_entity】建筑要素与通风开口面积的结果为true
+2025-03-10 14:56:57,733 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:58,174 - INFO - 【evaluate_entity】建筑要素与附属设施的结果为true
+2025-03-10 14:56:58,289 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:56:58,652 - INFO - 【evaluate_entity】建筑要素与房间地板面积的结果为true
+2025-03-10 14:56:58,762 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:04,738 - INFO - 【evaluate_entity】建筑要素与围护结构的结果为true
+2025-03-10 14:57:04,850 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:05,395 - INFO - 【evaluate_entity】危险物质与危险化学品的结果为true
+2025-03-10 14:57:05,514 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:06,612 - INFO - 【evaluate_entity】建筑要素与可调节遮阳设施的面积占外窗透明部分比例的结果为true
+2025-03-10 14:57:06,732 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:07,703 - INFO - 【evaluate_entity】地质现象与滑坡的结果为true
+2025-03-10 14:57:07,822 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:11,286 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:13,996 - INFO - 【evaluate_entity】建筑要素与建筑结构的结果为true
+2025-03-10 14:57:14,116 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:14,575 - INFO - 【evaluate_entity】建筑性能与承载力的结果为true
+2025-03-10 14:57:14,728 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:15,673 - INFO - 【evaluate_entity】建筑性能与部品组合的同寿命性的结果为true
+2025-03-10 14:57:15,819 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:17,468 - INFO - 【evaluate_entity】建筑要素与室外公共活动场地的结果为true
+2025-03-10 14:57:17,587 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:20,762 - INFO - 【evaluate_entity】建筑性能与安全的结果为true
+2025-03-10 14:57:20,877 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:22,226 - INFO - 【evaluate_entity】建筑要素与节能设计的结果为true
+2025-03-10 14:57:22,342 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:23,068 - INFO - 【evaluate_entity】建筑性能与隔热性能的结果为true
+2025-03-10 14:57:23,187 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:25,262 - INFO - 【evaluate_entity】建筑要素与非结构构件的结果为true
+2025-03-10 14:57:25,378 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:30,672 - INFO - 【evaluate_entity】物理现象与冷凝的结果为true
+2025-03-10 14:57:30,777 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:32,224 - INFO - 【evaluate_entity】建筑要素与平面布局的结果为true
+2025-03-10 14:57:32,413 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:33,884 - INFO - 【evaluate_entity】建筑性能与空气声隔声性能的结果为true
+2025-03-10 14:57:34,003 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:35,555 - INFO - 【evaluate_entity】建筑性能与防护的结果为true
+2025-03-10 14:57:35,680 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:35,791 - INFO - 【evaluate_entity】建筑要素与外保温的结果为true
+2025-03-10 14:57:35,915 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:39,928 - INFO - 【evaluate_entity】危险物质与易燃易爆危险源的结果为true
+2025-03-10 14:57:40,042 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:41,707 - INFO - 【evaluate_entity】建筑性能与自然通风效果的结果为true
+2025-03-10 14:57:41,825 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:42,399 - INFO - 【evaluate_entity】建筑性能与建筑使用功能的结果为true
+2025-03-10 14:57:42,510 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:46,834 - INFO - 【evaluate_entity】建筑性能与低限标准限值的结果为true
+2025-03-10 14:57:46,941 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:49,879 - INFO - 【evaluate_entity】建筑要素与设备的结果为true
+2025-03-10 14:57:50,013 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:50,363 - INFO - 【evaluate_entity】建筑要素与场地的结果为true
+2025-03-10 14:57:50,479 - INFO - 【evaluate_entity】建筑性能与自然通风换气次数的结果为true
+2025-03-10 14:57:50,493 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:50,590 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:53,692 - INFO - 【evaluate_entity】建筑性能与建筑节能设计标准的结果为true
+2025-03-10 14:57:53,811 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:56,468 - INFO - 【evaluate_entity】建筑性能与抗震设计的结果为true
+2025-03-10 14:57:56,584 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:56,679 - INFO - 【evaluate_entity】建筑性能与耐久的结果为true
+2025-03-10 14:57:56,831 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:57:57,085 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:05,226 - INFO - 【evaluate_entity】建筑性能与主体结构变形的结果为true
+2025-03-10 14:58:05,337 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:05,971 - INFO - 【evaluate_entity】建筑部位与外窗的结果为true
+2025-03-10 14:58:06,108 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:06,364 - INFO - 【evaluate_entity】建筑要素与建筑外墙的结果为true
+2025-03-10 14:58:06,477 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:08,648 - INFO - 【evaluate_entity】建筑性能与建筑部品部件耐久性的结果为true
+2025-03-10 14:58:08,734 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:11,670 - INFO - 【evaluate_entity】建筑性能与抗震性能的结果为true
+2025-03-10 14:58:11,801 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:13,044 - INFO - 【evaluate_entity】物理现象与电磁辐射的结果为true
+2025-03-10 14:58:13,169 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:14,396 - INFO - 【evaluate_entity】建筑部位与建筑物出入口的结果为true
+2025-03-10 14:58:14,509 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:15,403 - INFO - 【evaluate_entity】建筑性能与室内热舒适的结果为true
+2025-03-10 14:58:15,520 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:20,279 - INFO - 【evaluate_entity】建筑性能与围护结构热工性能的结果为true
+2025-03-10 14:58:20,398 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:20,791 - INFO - 【evaluate_entity】建筑部位与建筑出入口及平台的结果为true
+2025-03-10 14:58:20,911 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:20,961 - INFO - 【evaluate_entity】建筑部位与公共走廊的结果为true
+2025-03-10 14:58:21,101 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:25,186 - INFO - 【evaluate_entity】建筑要素与场地出入口的结果为true
+2025-03-10 14:58:25,311 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:27,262 - INFO - 【evaluate_entity】建筑性能与噪声级的结果为true
+2025-03-10 14:58:27,349 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:30,864 - INFO - 【evaluate_entity】建筑性能与撞击声隔声性能的结果为true
+2025-03-10 14:58:30,984 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:32,609 - INFO - 【evaluate_entity】建筑部位与建筑室内外活动场所的结果为true
+2025-03-10 14:58:32,800 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:34,364 - INFO - 【evaluate_entity】建筑性能与国家现行相关建筑节能设计标准的结果为true
+2025-03-10 14:58:34,482 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:38,755 - INFO - 【evaluate_entity】建筑性能与日照标准的结果为true
+2025-03-10 14:58:39,200 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:39,577 - INFO - 【evaluate_entity】建筑要素与建筑外门窗的结果为true
+2025-03-10 14:58:39,703 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:40,519 - INFO - 【evaluate_entity】建筑部位与背风面的结果为true
+2025-03-10 14:58:40,635 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:45,649 - INFO - 【evaluate_entity】建筑性能与建筑功能的结果为true
+2025-03-10 14:58:45,772 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:49,062 - INFO - 【evaluate_entity】物理现象与结露的结果为true
+2025-03-10 14:58:49,206 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:51,713 - INFO - 【evaluate_entity】建筑部位与地面的结果为true
+2025-03-10 14:58:51,836 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:54,692 - INFO - 【evaluate_entity】建筑部位与建筑迎风面的结果为true
+2025-03-10 14:58:54,808 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:55,043 - INFO - 【evaluate_entity】地质物质与含氡土壤的结果为true
+2025-03-10 14:58:55,161 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:58,254 - INFO - 【evaluate_entity】建筑部位与墙面的结果为true
+2025-03-10 14:58:58,327 - INFO - 【evaluate_entity】建筑环境与场地的结果为true
+2025-03-10 14:58:58,381 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:58:58,438 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"

@@ -1,0 +1,11 @@
+2025-03-10 14:51:19,801 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:51:26,791 - INFO - 【evaluate_entity】计量系统与用水量远传计量系统的结果为true
+2025-03-10 14:51:26,905 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:51:36,298 - INFO - 【evaluate_entity】计量系统与用水量远传计量系统的结果为true
+2025-03-10 14:51:36,414 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:51:47,686 - INFO - 【evaluate_entity】计量系统与用水量远传计量系统的结果为true
+2025-03-10 14:51:47,807 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:51:57,964 - INFO - 【evaluate_entity】计量系统与用水量远传计量系统的结果为true
+2025-03-10 14:51:58,087 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-03-10 14:52:12,049 - INFO - 【evaluate_entity】计量系统与用水量远传计量系统的结果为true
+2025-03-10 14:52:12,166 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
