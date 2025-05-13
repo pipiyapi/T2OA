@@ -3,6 +3,7 @@
    - python 3.11
 ```bash
 pip install requirement
+```
 ## 1. T2OA Implementation
 1. **Setup Configuration**  
    - Fill in LLM API key in `LLM.py`  
