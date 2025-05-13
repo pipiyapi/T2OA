@@ -1,5 +1,7 @@
 # Text2Onto-Agent: An Agent-Based End-to-End Automated Construction Method for Domain-Specific Ontology Models
-
+##Environment
+python 3.11
+pip install requirement
 ## 1. T2OA Implementation
 1. **Setup Configuration**  
    - Fill in LLM API key in `LLM.py`  
