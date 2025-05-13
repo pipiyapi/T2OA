@@ -1,6 +1,7 @@
 # Text2Onto-Agent: An Agent-Based End-to-End Automated Construction Method for Domain-Specific Ontology Models
 ##Environment
-python 3.11
+   - python 3.11
+```bash
 pip install requirement
 ## 1. T2OA Implementation
 1. **Setup Configuration**  
