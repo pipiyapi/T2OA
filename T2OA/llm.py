@@ -1,9 +1,5 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-# llm = ChatOpenAI(temperature=0.95,
-#     model="glm-4-plus",
-#     openai_api_key="622fdfedd0f44427a7ede6c08bc3e0f6.g5RxppQNA0qhKTZy",
-#     openai_api_base="https://open.bigmodel.cn/api/paas/v4/")
 llm = ChatOpenAI(
     model='deepseek-chat',
     openai_api_key='*****************',
