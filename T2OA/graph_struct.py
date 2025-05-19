@@ -82,7 +82,7 @@ def retrieval_related_node(state: State):
     logging.info(f"【retrieval_related_node】返回的相似节点列表：{related_nodes[:top_k]}")
     return {"related_nodes":related_nodes[:top_k]}
 def retrieval_related_node_2(state: State):
-    top_k=10
+    top_k=20
     in_graph_entity_type = state.get("in_graph_entity_type")
     logging.info(f"【retrieval_related_node_2】in_graph_entity_type:{state.get('in_graph_entity_type')}")
     retrieve_node_list=[]
