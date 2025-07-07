@@ -2,8 +2,8 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 llm = ChatOpenAI(
     model='deepseek-chat',
-    openai_api_key='*****************',
-    openai_api_base='*****************',
+    openai_api_key='sk-wOXat7SFftYVnBeODe35991dAcCf487c9833F7E3025f0f9c',
+    openai_api_base='https://api.gpt.ge/v1/',
     max_tokens=10000
 )
 llm_R1 = ChatOpenAI(
@@ -12,6 +12,71 @@ llm_R1 = ChatOpenAI(
     openai_api_base='*****************',
     max_tokens=8000
 )
+llm_split_prompt = ChatPromptTemplate.from_template("""
+    <Role>
+    你是文本分块专家，下面的chunk是为两个原本相连的文本块，请判断如果按照当前位置划分为chunk1和chunk2是否合理。
+    </Role>
+    
+     <requirement>
+    1.理解文本内容。
+	2.你只需要对chunk1末尾和chunk2开头的分块位置判断，不需要判断chunk1开头和chunk2末尾。
+    3.如果你认为当前分块位置合理，分块后chunk1和chunk2可以单独理解，规范条目完整存在于同一块内，返回1。
+    4.如果你认为当前分块位置不合理，分块后chunk1和chunk2无法单独理解，上下文语义被破坏，同一规范条目不在同一块内则返回0。
+    5.结果只返回1或0，除此之外不要返回其他任何内容
+    </requirement>
+    
+    <chunk1>
+    {chunk1}
+    </chunk1>
+
+    <chunk2>
+    {chunk2}
+    </chunk2>
+    """)
+ner1_prompt = ChatPromptTemplate.from_template("""
+    <Role>
+    你是绿色建筑评估领域专门进行知识图谱中的实体抽取的专家。
+    </Role>
+
+    <task>
+    请从下面给出的绿色建筑规范文本中抽取出实体并生成其实体类型，结果以json格式的列表返回[[实体1，实体类型1],[实体2，实体类型2].....[实体n，实体类型n]],除此之外不要返回其他任何内容。
+    <task>
+
+    <requirement>
+    -你需要理解文本内容，不要遗漏任何一个实体
+    -规范条文的编号不要作为实体抽取。
+    -实体类型应该是从文本中抽取的实体的抽象上位词
+    </requirement>
+
+    <text>
+    以下是你需要进行实体抽取的文本：
+    {text}
+    </text>
+    """)
+ner2_prompt = ChatPromptTemplate.from_template("""
+    <Role>
+    你是绿色建筑评估领域专门进行知识图谱中的实体抽取的专家。
+    </Role>
+
+    <task>
+    entity_list中内容为已经抽取出的实体。请根据text中的内容对entity_list中的错误的[实体,实体类型]进行替换，正确的[实体,实体类型]进行保留，遗漏的[实体,实体类型]进行追加。结果以json格式的列表返回最终完整的[[实体1，实体类型1],[实体2，实体类型2].....[实体n，实体类型n]],除此之外不要返回其他任何内容。
+    <task>
+
+    <requirement>
+    -你需要理解文本内容，不要遗漏任何一个实体
+    -规范条文的编号不要作为实体抽取。
+    -实体类型应该是从文本中抽取的实体的抽象上位词
+    </requirement>
+
+    <text>
+    以下是你需要进行实体抽取的文本：
+    {text}
+    </text>
+
+    <entity_list>
+    {entity_list}
+    </entity_list>
+    """)
 llm_disambiguation_prompt = ChatPromptTemplate.from_template(
     """
     <Role>
@@ -62,8 +127,6 @@ llm_disambiguation_diagnose_prompt = ChatPromptTemplate.from_template(
     -相同的实体类型之间不是is_a关系，属于同一层级。
     -相同的实体类型具有相似的描述。
     </same_entity_type_rule>
-   
-   
    
     <example>
     1.'指标', '用水量指标' 解释：指标的概念比用水量指标更广泛，因此不属于同一实体类型。
