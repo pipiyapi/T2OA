@@ -60,11 +60,11 @@ if __name__ == "__main__":
     )
     #从头开始agent
     # concept extraction
-    chunk_text("ner/data/绿色建筑评价标准.txt", 500, "ner/data/绿色建筑评价标准_chunk.txt")
-    iteration_ner("ner/data/绿色建筑评价标准_chunk.txt")
+    # chunk_text("ner/data/绿色建筑评价标准.txt", 500, "ner/data/绿色建筑评价标准_chunk.txt")
+    # iteration_ner("ner/data/绿色建筑评价标准_chunk.txt")
     #concept description generation
-    file_initialize("ner/ner结果.json","data/entity_type_unprocessed.json")
-    generate_description("data/entity_type_unprocessed.json","data/description_result.json")
+    # file_initialize("ner/ner结果.json","data/entity_type_unprocessed.json")
+    # generate_description("data/entity_type_unprocessed.json","data/description_result.json")
     #concept disambiguation,relation generation,ontology restructuring
     stream_graph_updates(config,group_num)
 

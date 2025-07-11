@@ -2,7 +2,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 llm = ChatOpenAI(
     model='deepseek-chat',
-    openai_api_key='sk-wOXat7SFftYVnBeODe35991dAcCf487c9833F7E3025f0f9c',
+    openai_api_key='*********************',
     openai_api_base='https://api.gpt.ge/v1/',
     max_tokens=10000
 )

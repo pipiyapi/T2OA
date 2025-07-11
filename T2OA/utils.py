@@ -15,7 +15,7 @@ def get_embedding(text) -> list:
         "encoding_format": "float"
     }
     headers = {
-        "Authorization": "Bearer sk-bsgplggngjjboctlpenlllmbgegyxsfrxbltbvusqtgveghx",
+        "Authorization": "Bearer **************************************",
         "Content-Type": "application/json"
     }
 
@@ -59,14 +59,14 @@ def get_entity_str(entity_types:list):
     entity_str="\n".join(entity_list)
     return entity_str
 def get_description(entity_type):
-    with open("temp_data/description_result.json", 'r', encoding='utf-8') as f:
+    with open("data/description_result.json", 'r', encoding='utf-8') as f:
         description_result = json.load(f)
     entity_type_description=description_result.get(entity_type,None)
     if entity_type_description is None:
         logging.info(f"【get_description】实体类型:{entity_type}没有找到描述，正在生成描述...")
         process_item(entity_type)
         description_result[entity_type] = process_item(entity_type)
-        with open("temp_data/description_result.json", 'w', encoding='utf-8') as f:
+        with open("data/description_result.json", 'w', encoding='utf-8') as f:
             json.dump(description_result, f, indent=4, ensure_ascii=False)
         entity_type_description=description_result[entity_type]
     entity_type_description_str=(

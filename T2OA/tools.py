@@ -1,11 +1,9 @@
 from langchain_core.tools import tool
-from state import State
 import os
 import logging
-from utils import get_entity_str
 from typing import List,Annotated
-from llm import llm,Hypernym_disambiguation_prompt,Hypernym_disambiguation_diagnose_prompt
-from neo4j_database.cypher import *
+from llm import Hypernym_disambiguation_prompt,Hypernym_disambiguation_diagnose_prompt
+from cypher import *
 from utils import get_description
 class ToolResult:
     def __init__(self, tool_name: str, tool_input: str, tool_output: str):
