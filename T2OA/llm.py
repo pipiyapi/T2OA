@@ -33,6 +33,7 @@ llm_split_prompt = ChatPromptTemplate.from_template("""
     {chunk2}
     </chunk2>
     """)
+
 ner1_prompt = ChatPromptTemplate.from_template("""
     <Role>
     你是绿色建筑评估领域专门进行知识图谱中的实体抽取的专家。
@@ -77,6 +78,20 @@ ner2_prompt = ChatPromptTemplate.from_template("""
     {entity_list}
     </entity_list>
     """)
+llm_description_generate_prompt = ChatPromptTemplate.from_template(
+    """
+    你是绿色建筑领域进行本体模型构建的专家，根据以下给出的实体类型，生成要求的实体类型的定义描述，结果返回json格式字典，除此之外不要返回其他任何内容。
+    要求包含以下4点：
+    1.该实体类型是父类中的一种
+    2.有哪些类型与该实体类型同层次，也同属于父类。
+    3.该实体类型可能包含哪些子类型
+    4.对该实体类型的一段文字定义描述
+
+    以下是你需要定义的实体类型名称：{entity_type}
+
+    结果返回json格式字典如下：{{"父类":"......","同层次类型":["类型1","类型2",....],"子类型":["子类型1","子类型2",....],"定义描述":"......"}}
+    """
+)
 llm_disambiguation_prompt = ChatPromptTemplate.from_template(
     """
     <Role>

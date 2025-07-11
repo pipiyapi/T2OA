@@ -1,6 +1,6 @@
 import json
 import logging
-from data.generate_description import process_item
+from generate_description import process_item
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
