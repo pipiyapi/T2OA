@@ -8,21 +8,15 @@ pip install requirement
 ## 1. T2OA Implementation
 1. **Setup Configuration**  
    - Fill in LLM API key in `LLM.py`  
-   - Fill in embedding model API key in `neo4j_database/cypher.py`(function `retrieve_similar_node`)  
-   - Configure Neo4j parameters in `neo4j_conf.py`  
-   - Execute `create_embedding_index` function in `neo4j_database/cypher.py` to create vector index in Neo4j
+   - Fill in embedding model API key in `neo4j_database/cypher.py`(function `retrieve_similar_node`)  and `utils.py`(function `get_embedding`)
+   - Configure Neo4j parameters in `neo4j_conf.py`
 
-2. **Concept Extraction**  
-   - Initial extraction: `ner/ner.py` (function `ner_1`)  
-   - Iterative refinement: `ner/ner.py` (function `ner_2`)
+2. **Upload Your Raw Text**  
+   - Upload your raw text in `ner/data/绿色建筑评价标准.txt`
 
-3. **Graph Construction**  
-   - Run `run_graph.py` for:  
-     - Concept Disambiguation  
-     - Relation Generation  
-     - Schema Refinement  
-   - Agent framework: `graph_struct.py`  
-   - Prompt templates: `LLM.py`
+3. **Run the T2OA**
+    -setting your own parameters in `run_T2OA.py` T2OA_config
+    -run `python run_T2OA.py`
 
 ## 2. Evaluation
 1. Baseline reproduction: `evaluation/benchmark_onto/cluster.py`  

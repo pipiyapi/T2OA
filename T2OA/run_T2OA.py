@@ -3,6 +3,7 @@ from file_initialize import file_initialize
 from text_chunking import chunk_text
 from ner import iteration_ner
 from generate_description import generate_description
+from cypher import create_embedding_index
 import logging
 import time
 import os
@@ -68,6 +69,8 @@ if __name__ == "__main__":
         ]
     )
     #Run the agent from scratch
+    #create neo4j embedding index
+    create_embedding_index()
     # concept extraction
     chunk_text(T2OA_config.get("raw_data_path"), 500, T2OA_config.get("split_data_path"))
     iteration_ner(T2OA_config.get("split_data_path"))
