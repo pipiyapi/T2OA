@@ -7,7 +7,7 @@ import logging
 import time
 import os
 import json
-def stream_graph_updates(config,group_num):
+def stream_graph_updates(config,group_num,top_k):
     with open("data/entity_type_unprocessed.json", "r", encoding="utf-8") as f:
         entity_type_unprocessed_all = json.load(f)
     state_dict={
@@ -16,7 +16,8 @@ def stream_graph_updates(config,group_num):
     "related_nodes": [],
     "in_graph_entity_type_all": [],
     "in_graph_entity_type": [],
-    "group_num": group_num}
+    "group_num": group_num,
+    "top_k":top_k}
     events = graph.stream(state_dict,config=config,stream_mode="values")
     # events = graph.stream({"group_num":group_num},config=config,stream_mode="values")
     for event in events:
@@ -41,11 +42,19 @@ def get_last_state(config):
             # event["messages"][-1].pretty_logging.info()
             logging.info("------------------------------------------------")
 if __name__ == "__main__":
+    T2OA_config={
+        "recursion_limit": 200000, #Langgraph recursion restriction
+        "thread_id":"111", #Thread ID
+        "group_num":50,#Size of the current processing concept list
+        "top_k":65,#Size of the retrieved node list
+        "raw_data_path":"ner/data/绿色建筑评价标准.txt",#raw data path
+        "split_data_path":"ner/data/绿色建筑评价标准_chunk.txt",#split data path
+    }
     #设置config
     config = {"recursion_limit": 20000,"configurable": {"thread_id": "agent4_13"}}
-    group_num=15
-
-    #log 设置
+    group_num=T2OA_config.get("group_num")
+    top_k=T2OA_config.get("top_k")
+    #log set
     timestamp = time.strftime("%Y-%m-%d_%H-%M-%S")
     log_dir = "logs"
     os.makedirs(log_dir, exist_ok=True)
@@ -58,17 +67,17 @@ if __name__ == "__main__":
             logging.StreamHandler()
         ]
     )
-    #从头开始agent
+    #Run the agent from scratch
     # concept extraction
-    # chunk_text("ner/data/绿色建筑评价标准.txt", 500, "ner/data/绿色建筑评价标准_chunk.txt")
-    # iteration_ner("ner/data/绿色建筑评价标准_chunk.txt")
+    chunk_text(T2OA_config.get("raw_data_path"), 500, T2OA_config.get("split_data_path"))
+    iteration_ner(T2OA_config.get("split_data_path"))
     #concept description generation
-    # file_initialize("ner/ner结果.json","data/entity_type_unprocessed.json")
-    # generate_description("data/entity_type_unprocessed.json","data/description_result.json")
+    file_initialize("ner/ner结果.json","data/entity_type_unprocessed.json")
+    generate_description("data/entity_type_unprocessed.json","data/description_result.json")
     #concept disambiguation,relation generation,ontology restructuring
-    stream_graph_updates(config,group_num)
+    stream_graph_updates(config,group_num,top_k)
 
-    #从断点开始agent
+    #Start running the agent from the breakpoint
     # retry_count = 0
     # max_retries = 2
     # while retry_count < max_retries:

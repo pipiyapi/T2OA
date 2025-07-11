@@ -14,3 +14,4 @@ class State(TypedDict):
     level1_dict:dict #一级节点字典,包含对该节点的示例子节点
     related_nodes: list #检索到已在图中的相似实体类型列表
     group_num: int  #一轮处理的消歧的实体类型个数
+    top_k:int #检索到的相似实体类型个数

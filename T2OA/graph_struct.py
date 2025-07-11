@@ -54,7 +54,7 @@ def group_num_complete(state: State):
     }
 
 def retrieval_related_node(state: State):
-    top_k=20
+    top_k=state.get("top_k")
     entity_type_unprocessed = state.get("entity_type_unprocessed")
     logging.info(f"【retrieval_related_node】entity_type_unprocessed:{state.get('entity_type_unprocessed')}")
     retrieve_node_list=[]
@@ -79,7 +79,7 @@ def retrieval_related_node(state: State):
     logging.info(f"【retrieval_related_node】返回的相似节点列表：{related_nodes[:top_k]}")
     return {"related_nodes":related_nodes[:top_k]}
 def retrieval_related_node_2(state: State):
-    top_k=20
+    top_k=state.get("top_k")
     in_graph_entity_type = state.get("in_graph_entity_type")
     logging.info(f"【retrieval_related_node_2】in_graph_entity_type:{state.get('in_graph_entity_type')}")
     retrieve_node_list=[]
