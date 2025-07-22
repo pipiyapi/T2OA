@@ -3,6 +3,7 @@ from langchain_core.prompts import ChatPromptTemplate
 import json
 from llm import llm,ner1_prompt,ner2_prompt
 from tqdm import tqdm
+import logging
 def read_chunk(chunk_path="ner/data/绿色建筑评价标准.txt"):
     with open(chunk_path, 'r', encoding='utf-8') as file:
         chunk_list=[]
@@ -65,7 +66,6 @@ def ner_2(entity_dict,chunk_list):
         entity_dict[id] = ner_result_json
         id += 1
     return entity_dict
-
 def count_entity(entity_dict):
     entity_num=set()
     entity_type_num=set()
@@ -89,9 +89,15 @@ def iteration_ner(chunk_path):
     while True:
         entity_dict=json_load(f"ner/ner第{num}轮.json")
         entity_dict2=ner_2(entity_dict,chunk_list)
+
+        num_1= count_entity(json_load(f"ner/ner第{num}轮.json"))[1]
+        logging.info(f"上一轮：{num}实体类型数量为：{num_1}")
         num += 1
         json_save(entity_dict2, f"ner/ner第{num}轮.json")
-        if count_entity(entity_dict2[1])<=count_entity(entity_dict[1]):
+        num_2 = count_entity(json_load(f"ner/ner第{num}轮.json"))[1]
+        logging.info(f"本轮：{num}实体类型数量为：{num_2}")
+        if num_2<=num_1:
+            logging.info(f"NER迭代结束，共迭代{num}轮,实体类型数量为：{num_2}")
             break
     json_result = json_load(f"ner/ner第{num}轮.json")
     list_result = []
@@ -113,14 +119,20 @@ if __name__ == "__main__":
     # entity_dict=json_load("ner第四轮.json")
     # entity_dict2=ner_2(entity_dict,chunk_list)
     # json_save(entity_dict2, "ner第五轮.json")
-    entity_dict1 = json_load("ner第一轮.json")
-    entity_dict2 = json_load("ner第二轮.json")
-    entity_dict3 = json_load("ner第三轮.json")
-    entity_dict4 = json_load("ner第四轮.json")
-    entity_dict5 = json_load("ner第五轮.json")
-    print(count_entity(entity_dict1))
-    print(count_entity(entity_dict2))
-    print(count_entity(entity_dict3))
-    print(count_entity(entity_dict4))
-    print(count_entity(entity_dict5))
+    entity_dict1 = json_load("ner/ner第1轮.json")
+    entity_dict2 = json_load("ner/ner第2轮.json")
+    entity_dict3 = json_load("ner/ner第3轮.json")
+    entity_dict4 = json_load("ner/ner第4轮.json")
+    entity_dict5 = json_load("ner/ner第5轮.json")
+    entity_dict6 = json_load("ner/ner第6轮.json")
+    entity_dict7 = json_load("ner/ner第7轮.json")
+    entity_dict8 = json_load("ner/ner第8轮.json")
+    print(count_entity(entity_dict1)[1])
+    print(count_entity(entity_dict2)[1])
+    print(count_entity(entity_dict3)[1])
+    print(count_entity(entity_dict4)[1])
+    print(count_entity(entity_dict5)[1])
+    print(count_entity(entity_dict6)[1])
+    print(count_entity(entity_dict7)[1])
+    print(count_entity(entity_dict8)[1])
 
