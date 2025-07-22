@@ -52,7 +52,7 @@ if __name__ == "__main__":
         "split_data_path":"ner/data/绿色建筑评价标准_chunk.txt",#split data path
     }
     #设置config
-    config = {"recursion_limit": 20000,"configurable": {"thread_id": "agent4_13"}}
+    config = {"recursion_limit": T2OA_config.get("recursion_limit"),"configurable": {"thread_id": T2OA_config.get("thread_id")}}
     group_num=T2OA_config.get("group_num")
     top_k=T2OA_config.get("top_k")
     #log set

@@ -28,7 +28,7 @@ def ner(chunk_list):
             try:
                 print(f"text:{chunk}")
                 ner_result = ner_llm.invoke({"text": chunk}).content
-                ner_result_json = json.loads(ner_result.replace('```json', '').replace('```', ''))
+                ner_result_json = json.loads(ner_result.replace('```json', '').replace('```', '').replace("'", '"'))
                 print(ner_result_json)
                 break
             except Exception as e:
@@ -52,7 +52,7 @@ def ner_2(entity_dict,chunk_list):
                 print(f"text:{chunk},entity_list:{str(entity_dict[str(id)])}")
                 ner_result = ner_llm.invoke({"text": chunk,"entity_list":str(entity_dict[str(id)])}).content
                 print(ner_result)
-                ner_result_json = json.loads(ner_result.replace('```json', '').replace('```', ''))
+                ner_result_json = json.loads(ner_result.replace('```json', '').replace('```', '').replace("'", '"'))
                 print(ner_result_json)
                 break
             except Exception as e:
@@ -65,6 +65,7 @@ def ner_2(entity_dict,chunk_list):
         entity_dict[id] = ner_result_json
         id += 1
     return entity_dict
+
 def count_entity(entity_dict):
     entity_num=set()
     entity_type_num=set()

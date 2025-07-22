@@ -1,4 +1,4 @@
-# Text2Onto-Agent: An Agent-Based End-to-End Automated Construction Method for Green Building Ontology Models
+# Text2Onto-Agent: An Agent-Based End-to-End Automated Construction Method for Domain-Specific Ontology Models
 ##Environment
    - python 3.11
 ```bash
@@ -7,7 +7,7 @@ pip install requirement
 ## 1. T2OA Implementation
 1. **Setup Configuration**  
    - Fill in LLM API key in `LLM.py`  
-   - Fill in embedding model API key in `neo4j_database/cypher.py`(function `retrieve_similar_node`)  and `utils.py`(function `get_embedding`)
+   - Fill in embedding model API key in `cypher.py`(function `retrieve_similar_node`)  and `utils.py`(function `get_embedding`)
    - Configure Neo4j parameters in `neo4j_conf.py`
 
 2. **Upload Your Raw Text**  

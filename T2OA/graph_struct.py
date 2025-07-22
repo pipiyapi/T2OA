@@ -117,7 +117,7 @@ def llm_disambiguation(state:State):
     while retry_count < 3:
         try:
             result = llm_disambiguation_assistant.invoke({"entity_type_list":entity_type_list}).content
-            disambiguation_result = json.loads(result.replace('```json', '').replace('```', ''))
+            disambiguation_result = json.loads(result.replace('```json', '').replace('```', '').replace("'", '"'))
             break
         except (json.JSONDecodeError, ValueError) as e:
             retry_count += 1
@@ -217,7 +217,7 @@ def llm_relation(state:State):
     while retry_count < 3:
         try:
             result = llm_relation_assistant.invoke({"entity_type_list":str(entity_type_list)}).content
-            add_relation_result = json.loads(result.replace('```json', '').replace('```', ''))
+            add_relation_result = json.loads(result.replace('```json', '').replace('```', '').replace("'", '"'))
             break
         except (json.JSONDecodeError, ValueError) as e:
             retry_count += 1
@@ -359,7 +359,7 @@ def llm_check_tree_format(state:State):
         llm_fix_graph_assistant = llm_fix_graph_prompt | llm
         llm_fix_graph_result = llm_fix_graph_assistant.invoke({"json_graph_info": str(graph_json_info)}).content
         logging.info(f"【fix_graph】llm_fix_graph_result结果:{llm_fix_graph_result}")
-        fix_graph_result = json.loads(llm_fix_graph_result.replace('```json', '').replace('```', ''))
+        fix_graph_result = json.loads(llm_fix_graph_result.replace('```json', '').replace('```', '').replace("'", '"'))
         logging.info(f"【fix_graph】修复后结果:{fix_graph_result}")
         del_nodes_triples(graph_json_info["edges"])
         logging.info(f"【fix_graph】删除旧边{graph_json_info['edges']}")
@@ -399,7 +399,7 @@ def llm_schema(state:State):
     json_format_assistant=llm_json_format_prompt | llm
     json_format_result=json_format_assistant.invoke({"schema_result":schema_result}).content
     logging.info(f"【llm_schema】json_format_result:{json_format_result}")
-    json_object=json.loads(json_format_result.replace('```json', '').replace('```', ''))
+    json_object=json.loads(json_format_result.replace('```json', '').replace('```', '').replace("'", '"'))
     level1_list=json_object["一级实体列表"]
     level1_dict=json_object["一级实体列表字典表"]
     logging.info(f"【llm_schema】level1_list：{level1_list}")
@@ -431,7 +431,7 @@ def llm_check_tree_format_schema(state:State):
         llm_fix_graph_assistant = llm_fix_graph_prompt | llm
         llm_fix_graph_result = llm_fix_graph_assistant.invoke({"json_graph_info": str(graph_json_info)}).content
         logging.info(f"【fix_graph】llm_fix_graph_result结果:{llm_fix_graph_result}")
-        fix_graph_result = json.loads(llm_fix_graph_result.replace('```json', '').replace('```', ''))
+        fix_graph_result = json.loads(llm_fix_graph_result.replace('```json', '').replace('```', '').replace("'", '"'))
         logging.info(f"【fix_graph】修复后结果:{fix_graph_result}")
         del_nodes_triples(graph_json_info["edges"])
         logging.info(f"【fix_graph】删除旧边{graph_json_info['edges']}")
