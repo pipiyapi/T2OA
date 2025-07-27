@@ -1,8 +1,27 @@
 import json
 import os
-from neo4j_database.cypher import check_indegree_zero
-from llm import llm
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_neo4j import Neo4jGraph
+graph = Neo4jGraph(
+    url="bolt://localhost:7687",
+    database="neo4j",
+    username="neo4j",
+    password="12345678"
+)
+from langchain_openai import ChatOpenAI
+llm = ChatOpenAI(
+    model='deepseek-chat',
+    openai_api_key='*********************',
+    openai_api_base='https://api.gpt.ge/v1/',
+    max_tokens=10000
+)
+def check_indegree_zero():
+    query_result = graph.query("""
+    MATCH (n)
+    WHERE NOT ()-->(n)
+    RETURN COLLECT(DISTINCT n.entity_type_name) AS nodeNames
+    """)
+    return query_result[0]['nodeNames']
 def get_benchmark_entitytype():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     parent_dir = os.path.dirname(current_dir)

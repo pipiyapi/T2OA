@@ -69,16 +69,10 @@ if __name__ == "__main__":
                 text += i[0]+"、"
         print(f"len{l}")
         return text
-    with open("compare_ner/my_result2.json", 'r', encoding='utf-8') as f:
+    with open("compare_ner/my_result.json", 'r', encoding='utf-8') as f:
         data1 = json.load(f)
     with open("compare_ner/benchmark_result.json", 'r', encoding='utf-8') as f:
         data2 = json.load(f)
-    with open("ner第一轮.json", 'r', encoding='utf-8') as f:
-        data3 = json.load(f)
-    with open("ner第三轮.json", 'r', encoding='utf-8') as f:
-        data4 = json.load(f)
-    with open("ner第五轮.json", 'r', encoding='utf-8') as f:
-        data5 = json.load(f)
     def read_chunk():
         with open('绿色建筑评价标准.txt', 'r', encoding='utf-8') as file:
             chunk_list = []
@@ -94,17 +88,11 @@ if __name__ == "__main__":
         return chunk_list
     doc1 = connect_text(data1)
     doc2 = connect_text(data2)
-    doc3 = connect_text(data3)
-    doc4 = connect_text(data4)
-    doc5 = connect_text(data5)
     doc_train = read_chunk()
     doc_text="".join(doc_train)
     scores = {
         'doc1': [],
-        'doc2': [],
-        'doc3': [],
-        'doc4': [],
-        'doc5': []
+        'doc2': []
     }
     topic_num_list=[10,20,30,40,50,80,100,150,200]
     for topic_num in topic_num_list:
@@ -118,22 +106,10 @@ if __name__ == "__main__":
         # 计算各文档分数
         doc1_score = calculate_ts_score(doc1, doc_text, dictionary, lda_model)
         doc2_score = calculate_ts_score(doc2, doc_text, dictionary, lda_model)
-        doc3_score = calculate_ts_score(doc3, doc_text, dictionary, lda_model)
-        doc4_score = calculate_ts_score(doc4, doc_text, dictionary, lda_model)
-        doc5_score = calculate_ts_score(doc5, doc_text, dictionary, lda_model)
+
 
         # 存储分数
         scores['doc1'].append(doc1_score)
         scores['doc2'].append(doc2_score)
-        scores['doc3'].append(doc3_score)
-        scores['doc4'].append(doc4_score)
-        scores['doc5'].append(doc5_score)
+    print(scores)
 
-        # 转换为DataFrame并写入Excel
-    df = pd.DataFrame.from_dict(
-        scores,
-        orient='index',
-        columns=[str(num) for num in topic_num_list]
-    )
-    df.to_excel('ts_scores_noentity.xlsx', sheet_name='TS Scores')
-    print("分数已保存至 ts_scores_noentity.xlsx")
